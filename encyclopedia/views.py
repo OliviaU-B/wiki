@@ -82,8 +82,10 @@ def create_entry(request):
                 "body": entry_html,
             })
         else:
-            return render(request, "encyclopedia/already_exists.html", {
+            return render(request, "encyclopedia/create_entry.html", {
+                "error_message": "Error.",
                 "title": title,
+                "body": body,
             })
 
 

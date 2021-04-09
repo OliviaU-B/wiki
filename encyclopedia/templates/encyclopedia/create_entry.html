@@ -7,12 +7,17 @@
 {% block body %}
 <h1>Create a New Encyclopedia Entry</h1>
 <span>Please write your new post in Markdown - information on how to use this can be found <a href="https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax" target="_blank">here</a>.</span>
+
+{% if error_message %}
+<p class="error_message">Sorry, it looks like a page called "{{ title }}" already exists! Please have a look at our page for {{ title }} <a href="{% url 'get_entry' title %}">here</a>. If this does not cover your content, please change the name of your new page.</p>
+{% endif %}
+
 <form action="{% url 'create_entry' %}" method="POST">
     {% csrf_token %}
     <label for="title">Title:</label><br/>
-    <input type="text" id="title" name="title"><br/>
+    <input type="text" id="title" name="title" value="{{ title }}" required><br/>
     <label for="body">Entry body:</label><br/>
-    <textarea id="body" name="body"></textarea><br/>
+    <textarea id="body" name="body">{{ body }}</textarea><br/>
     <input type="submit">
 </form>
 
