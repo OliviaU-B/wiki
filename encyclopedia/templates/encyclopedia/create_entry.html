@@ -6,7 +6,7 @@
 
 {% block body %}
 <h1>Create a New Encyclopedia Entry</h1>
-<span>Please write your new post in Markdown - information on how to use this can be found <a href="https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">here</a></span>
+<span>Please write your new post in Markdown - information on how to use this can be found <a href="https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax" target="_blank">here</a>.</span>
 <form action="{% url 'create_entry' %}" method="POST">
     {% csrf_token %}
     <label for="title">Title:</label><br/>
