@@ -12,7 +12,7 @@
             <li><a href="{% url 'get_entry' entry %}">{{ entry }}</a></li>
         {% empty %}
             <p>Sorry, it doesn't look like we have a page related to "{{ query }}".</p>
-            <p>Please make a new search or you can create your own page for this topic by clicking on the 'Create New Page' button.</p>
+        <p>Please make a new search or you can <a href="{% url 'create_entry' %}">create your own page for this topic</a>.</p>
 
         {% endfor %}
     </ul>
