@@ -48,7 +48,8 @@ def search(request):
                 suggested_entries.append(entry)
         print(suggested_entries)
         return render(request, "encyclopedia/index.html", {
-            "entries": suggested_entries
+            "entries": suggested_entries,
+            "query": query,
         })
 
 

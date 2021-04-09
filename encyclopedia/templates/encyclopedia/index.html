@@ -9,7 +9,11 @@
 
     <ul>
         {% for entry in entries %}
-        <li><a href="{% url 'get_entry' entry %}">{{ entry }}</a></li>
+            <li><a href="{% url 'get_entry' entry %}">{{ entry }}</a></li>
+        {% empty %}
+            <p>Sorry, it doesn't look like we have a page related to "{{ query }}".</p>
+            <p>Please make a new search or you can create your own page for this topic by clicking on the 'Create New Page' button.</p>
+
         {% endfor %}
     </ul>
 
