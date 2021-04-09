@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background-color: white;
+    height: 100%;
 }
 
 code {
@@ -19,22 +20,52 @@ textarea {
 
 .main {
     padding: 10px;
+    margin-left: 220px;
 }
 
 .search {
     width: 100%;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 15px;
+    border-radius: 5px;
+    padding: 4px 8px;
 }
 
 .sidebar {
     background-color: #f0f0f0;
-    height: 100vh;
-    padding: 20px;
+    height: 100%;
+    width: 220px;
+    padding: 20px 30px;
+    position: fixed;
 }
 
 .sidebar h2 {
     margin-top: 5px;
+    font-size: 48px;
+}
+
+.sidebar div {
+    padding-top: 8px;
+}
+
+.sidebar a {
+    color: black;
+    font-size: 15px;
+}
+
+.sidebar a:hover {
+    color: #2A405A;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+ul li a {
+    color: black;
+}
+
+ul li a:hover {
+    color: #2A405A;
+    text-decoration: none;
 }
 
 .error_message {
