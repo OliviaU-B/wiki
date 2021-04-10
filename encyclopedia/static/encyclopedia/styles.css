@@ -2,6 +2,7 @@ body {
     margin: 0;
     background-color: white;
     height: 100%;
+    width: 100%;
 }
 
 code {
@@ -25,7 +26,7 @@ textarea {
 
 .search {
     width: 100%;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 15px;
     border-radius: 5px;
     padding: 4px 8px;
@@ -61,13 +62,26 @@ textarea {
 
 ul li a {
     color: black;
+    font-size: 15px;
 }
 
 ul li a:hover {
     color: #2A405A;
     text-decoration: none;
+    font-size: 16px;
 }
 
 .error_message {
     color: red;
+}
+
+.submit-button {
+    border-radius: 5px;
+    background-color: #8c8c8c;
+    border-color: #51555b;
+    padding: 4px 8px;
+}
+
+.submit-button:hover {
+    transform: scale(1.05);
 }
